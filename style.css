@@ -1,0 +1,306 @@
+@import "./font/font.css";
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+    --page-bg-color:rgb(31, 31, 31);
+
+    --nav-bg-color:rgb(23,23,23);
+    --nav-divisor-color:rgb(46,46,46);
+
+    --be-nav: 60px;
+
+    --example-bg-intern_color: rgb(182, 182, 182);
+    --example-bg-extern_color: rgb(105, 105, 105);
+}
+
+body{
+    margin: 0px;
+    background-color: var(--page-bg-color);    
+    color: white;
+    font: 1.5em 'Comfortaa', cursive;
+    overflow-x: hidden;
+}
+
+*[center]{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.be-nav{
+    width:100%;
+    height: var(--be-nav);
+}
+
+nav{
+    display: flex;
+    position:fixed;
+    top:0;
+    background-color: var(--nav-bg-color);
+    width:100%;
+    height: 60px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button{
+	font: 1.5em 'Comfortaa', cursive;
+    color: white;
+    border:0px;
+    width: 10%;
+    height: 100%;
+    background-color:transparent;
+    font-size: 0.7em;
+    transition-duration: 0.2s;
+}
+
+.nav-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 3px white;
+}
+
+.nav-divisor{
+    height: 70%;
+    width: 2.5px;
+    background-color:var(--nav-divisor-color);
+    border-radius: 3px;
+}
+
+header{
+    display: flex;
+    height: calc(100vh - var(--be-nav));
+    justify-content: center;
+    align-items: center;
+}
+
+header > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header > p{
+    height: 50px;
+    border:none;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.carousel > p:hover{
+    color:rgb(212, 212, 212);
+    transition-duration: 0.2s;
+}
+
+.carousel > p:first-child{
+    left: 0px;
+}
+
+.carousel > p:last-child{
+    right: 0px;
+}
+
+.page-title{
+    position: absolute;
+    z-index: 1;
+    font-size: 2.5em;
+}
+
+#imgGallery{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.img-carousel{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition-duration: 1s;
+    position: absolute;
+    background-color:gray;
+}
+
+.visibility{
+    opacity: 0.7;
+}
+
+#carouselValue{
+    display: none;
+}
+
+section{
+    margin: 15px;
+}
+
+.content{
+    position: relative;
+    height: 400px;
+    width:100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+	cursor: pointer;
+}  
+
+.text{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.10);
+    color: white;
+    padding: 20px;
+    transition-duration: 1s;
+}
+
+.text > * {
+    margin: 0;
+}
+
+.content-animation:hover .text{
+    color: black;
+}
+
+.content-animation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 15px;
+}
+
+.content-animation::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    background-color:white;
+    opacity: 0.2;
+    border-radius: 15px;
+    transition-duration: 1s;
+}
+
+.content-animation::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    background-color:white;
+    opacity: 0.3;
+    border-radius: 15px;
+    transition-duration: 0.7s;
+}
+
+.content:hover .content-animation::after{
+    width: 100%;
+}
+
+.content:hover .content-animation::before{
+    transition-delay: 0.5s;
+    width: 100%;
+}
+
+footer{
+    width: calc(100% - 20px);
+    height: 300px;
+    background-color: rgb(49, 49, 49);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+}
+
+.social-img{
+    width: 300px;
+}
+
+.code-example{
+    padding: 5px;
+    text-align: left;
+    width: 40%;
+    height: auto;
+    background-color: var(--example-bg-intern_color);
+    border: var(--example-bg-extern_color) solid 2vh;
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.try{
+    font-size: 0.7em;
+    position: absolute;
+    bottom: -4vh;
+    right: -3vh;
+    padding: 10px;
+    width: 11vh;
+    height: 3vh;
+    background-color: rgb(30, 30, 156);
+    border-radius: 15px;
+    transition-duration: 0.5s;
+    box-shadow: 0 0 10px  rgb(30, 30, 156);
+    cursor: pointer;
+}
+
+.try:hover{
+    color: rgb(30, 30, 156);
+    background-color: white;
+}
+
+hr.rounded {
+    border-top: 2px solid #bbb;
+    border-radius: 5px;
+    width: 75%;
+  }
+
+a{
+    color:  rgb(113, 113, 255);
+    margin: 10px;
+    font-size: 0.7em;
+}
+
+a:visited{
+    color: rgb(178, 143, 211);
+}
+
+.logo-img{
+    background-color: white; 
+    padding:10px;
+    width: 100px;
+    border-radius: 10px;
+    border:1px dashed black;
+}
+
+.inline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code-part{
+    text-align: left;
+}
+
+[locationame]{
+    cursor: pointer;
+}
+
+[sott]{
+    text-decoration: Underline;
+}
+
+li{
+    margin: 1vh;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../example-style.css">
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+    <div class="box code">
+        <code content="<html>"></code><br>
+        <code content="<head></head>"></code><br>
+        <code content="<body>"></code><br>
+        <code content="<h1>"></code>
+        <input id="xP" type="text" value="Il mio primo H1" placeholder="scrivi qualcosa">
+        <code content="</h1>"></code><br>
+		 <code content="<h2>"></code>
+        <input id="xP" type="text" value="Il mio primo H2" placeholder="scrivi qualcosa">
+        <code content="</h2>"></code><br>
+		 <code content="<h3>"></code>
+        <input id="xP" type="text" value="Il mio primo H3" placeholder="scrivi qualcosa">
+        <code content="</h3>"></code><br>
+		<code content="<h4>"></code>
+        <input id="xP" type="text" value="Il mio primo H4" placeholder="scrivi qualcosa">
+        <code content="</h4>"></code><br>
+		 <code content="<h5>"></code>
+        <input id="xP" type="text" value="Il mio primo H5" placeholder="scrivi qualcosa">
+        <code content="</h5>"></code><br>
+		 <code content="<h6>"></code>
+        <input id="xP" type="text" value="Il mio primo H6" placeholder="scrivi qualcosa">
+        <code content="</h6>"></code><br>
+        <code content="</body>"></code><br>
+        <code content="</html>"></code><br>
+    </div>
+    <div class="box result">
+        <html>
+            <head></head>
+            <body>
+                <h1 id="P"></h1>
+				<h2 id="P"></h2>
+				<h3 id="P"></h3>
+				<h4 id="P"></h4>
+				<h5 id="P"></h5>
+				<h6 id="P"></h6>
+            </body>
+        </html>
+    </div>   
+    <script type="text/javascript">
+		document.querySelectorAll("#P").forEach((element,item) => element.textContent = document.querySelectorAll("#xP")[item].value);
+		document.querySelector("#xP").forEach((element,item) => element.addEventListener("input", function(){querySelectorAll("#P")[item].textContent = element.value}))
+		/*.textContent = document.querySelector("#xP").value
+        document.querySelector("#xP").addEventListener("input", function(){element.textContent = this.value})*/
+    </script> 
+</body>
+</html>

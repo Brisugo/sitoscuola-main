@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Html tutorial</title>
+        <link rel="stylesheet" href="../style.css">
+        <script src="../script.js" defer></script>
+    </head>
+    <body>
+
+        <div class="be-nav"></div>
+
+        <nav>
+            
+            <span class="nav-divisor"></span>
+
+            <button class="nav-button" locationame="../index.html">Home</button>
+
+            <span class="nav-divisor"></span>
+
+            <button class="nav-button" locationame="../html-tutorial.html">HTML</button>
+
+            <span class="nav-divisor"></span>
+
+            <button class="nav-button" locationame="../css-tutorial.html">CSS</button>
+
+            <span class="nav-divisor"></span>
+
+        </nav>
+
+        <section center>
+
+            <h1>Welcome to HTML!</h1>
+            <br>
+            <p>clicca su <strong>Prova tu!</strong> per vedere come funziona.</p>
+            <div class="code-example">
+                <code content="<html>"></code><br>
+                <code content="<head></head>"></code><br>
+                <code content="<body>"></code><br>
+                <code content="<p> My first page </p>"></code><br>
+                <code content="</body>"></code><br>
+                <code content="</html>"></code><br>
+                <div class="try" locationtab="./example/ex1-basic-blank.html">Prova tu!</div>
+            </div>
+            <br>
+            <hr class="rounded">
+
+            <h1>Sommario</h1>
+            <ul>
+                <li><a href="#nozioni">Un paio di nozioni</a></li>
+                <li><a href="#inizio">Come iniziale</a></li>
+                <li><a href="#watag">Cos'è un tag</a></li>
+                <li><a href="#creaHtml">Come si crea un file HTML</a></li>
+                <li><a href="#page">Come si crea una pagina HTML</a></li>
+                <li><a href="#tag">Un paio di nozioni</a></li>
+            </ul>
+
+            <hr id="nozioni" class="rounded">
+
+            <h2>Un paio di nozioni</h2>
+            <p>L'HTML (HyperText Markup Language) come suggerisce è un linguaggio di <strong>MarkUp</strong>.</p>
+            <p>È utilizzato per creare pagine web come queste assieme al CSS che ordina gli oggetti, mentre l'HTML li crea.</p>
+            <p>Pubblicato nel 93' con la sua prima versione, mentre la sua ultima quella utilizzata da quasi tutti i pc è la 5.</p>
+
+            <img src="../source/html5logo.png" class="logo-img">
+            <a href="https://it.wikipedia.org/wiki/HTML">Full documentation Wiki</a>
+
+            <hr id="inizio" class="rounded">
+
+            <h2>Come iniziare</h2>
+            <p>Per iniziare a scrivere la nostra prima pagina HTML avremo bisogno di un editor.</p>
+            <div class="inline">
+                <p>Consiglio <strong>Notepad++</strong>, simile al classico blocco note.</p>
+                <a href="https://notepad-plus-plus.org/downloads/"><img src="../source/Notepad++_Logo.png" class="logo-img"></a>
+            </div>
+            <div class="inline">
+                <p>o <strong>Visual Studio code</strong>, più completo.</p>
+                <a href="https://code.visualstudio.com/"><img src="../source/Visual_Studio_Code_icon.png" class="logo-img"></a>
+            </div>
+            <p>Visual Studio code è più veloce nella scrittura perchè offre strumenti che aumentano la produttività.</p>
+            <p>Di editor su internet se ne trovano svariati anche online.</p>
+            <strong>Altrimenti possiamo anche usare il blocco note.</strong>
+
+            <hr id="watag" class="rounded">
+
+            <h1>Cos'è un tag</h1>
+            <p>Nel linguaggio HTML un tag è una sintassi particolare che ti consente di creare oggetti all'interno della pagina.</p>
+            <div class="inline">
+                <p style="margin-right: 10px;">Esempio di tag:   </p>
+                <h1 style="font-size: 2em;" content="< TAG >"></h1>
+                <p>contenuto</p>
+                <h1 style="font-size: 2em;" content="< / TAG >"></h1>
+            </div>
+            <p>Come si nota chieramente un tag è formato da "<strong><</strong>" e "<strong>></strong>"</p>
+            <p> e un nome del tag, in questo caso <strong>TAG</strong>.</p>
+            <br>
+            <p>Per aprire un tag dobbiamo eseguire questa sintassi <strong>< NOME ></strong></p>
+            <p>e per chiuderlo invece usiamo <strong>< / NOME ></strong></p>
+            <br>
+            <p>Per comprendere al meglio cos'è un tag partiamo da un esempio: prendiamo in considerazione un libro, è formato da una copertina e delle pagine al suo interno, la copertina che vediamo frontalmente (dove apriamo il libro) è il tag iniziale e quella sul retro il tag finale, mentre le pagine interne sono il contenuto del tag <strong>(NON il nome)</strong>, se per caso non chiudiamo il tag < / tag > è come dire un libro senza fine, senza copertina posteriore.</p>
+            
+            <h3><strong>!ATTENZIONE!</strong></h3>
+            <p>Chiudere sempre i tag se possibile!</p>
+
+            <br>
+
+            <p>Ma non tutti i tag hanno bisogno di una chiusura, a volte un tag non ha bisogno di un contenuto</p>
+            <p>Se prendiamo in considerazione il libro possiamo dire che le pagine sono dei tag che non si chiudono es:</p>
+            <div class="code-part">
+                <div class="inline">
+                    <h3><</h3>
+                    <h3 style="color:red">libro</h3>
+                    <h3>></h3>
+                    <p style="margin-left: 10px;">copertina frontale</p>
+                </div>
+                <h3 style="margin-left: 30px; color:aqua" content="<pagina1>"></h3>
+                <h3 style="margin-left: 30px; color:aqua" content="<pagina2>"></h3>
+                <h3 style="margin-left: 30px; color:aqua" content="<pagina3>"></h3>
+                <div class="inline">
+                    <h3 content="</"><h3>
+                    <h3 style="color:red">libro</h3>
+                    <h3>></h3>
+                    <p style="margin-left: 10px;">copertina posteriore</p>
+                </div>
+            </div>
+            <hr id="creaHtml" class="rounded">
+
+            <h1>Come si crea un file HTML</h1>
+
+            <p>Per creare una pagina HTML come prima cosa si apre <strong>Esplora File</strong> o sul desktop, tasto destro del mouse, nuovo file, file di testo</p>
+            <img src="../source/create-htmlfile.png">
+            <p>Dopo averlo creato dovremo chiamarlo come vorremo e poi cambiare quello che c'è dopo il punto da <strong>.TXT</strong> in <strong>.HTML</strong></p>
+
+            <div class="inline">
+                <p style="margin:0 20px 0 20px;">da</p>
+                <img src="../source/nameing_file.png">
+                <p style="margin:0 20px 0 20px;">a</p>
+                <img src="../source/changing_name_exension.png">
+            </div>
+            <br>
+            <p>Per aprirlo con Notepad++ basta fare tasto destro sul file, edit with notepad++</p>
+            <p>Per aprirlo con Visual Studio Code basta aprire Visual e in alto a sinistra cliccare su file, o nuovo file o apri file</p>
+            <p>Mentre per blocco note basta creare un file con estensione .TXT a prirlo e poi quando finito di scrivere cliccare in alto a sinistra su file, salva con nome e scrivere il nome con estensione .HTML</p>
+            <hr id="page" class="rounded">
+
+            <h1>Come si crea una pagina HTML</h1>
+            <p>Per creare una pagina html dobbiamo aprire il tag HTML e chiuderlo</p>
+            <code content="<html></html>"></code>
+            <p>Con questo andiamo a dire al PC che quello che sta analizzando è una pagina html e tutto cio che c'è dentro deve essere visualizzato come tale</p>
+            <br>
+            <p>dentro al tag html dobbiamo mettere 2 altri tag da chiudere: head e body</p>
+            <div class="code-part">
+                <code content="<html>"></code>
+                <code content="<head></head>"></code>
+                <code content="<body></body>"></code>
+                <code content="</html>"></code>
+            </div>
+
+            <h3>!ATTENZIONE!</h3>
+            <p>La formattazione corretta del codice è molto importante a livello visivo!</p>
+            <p>I tag vanno sempre ordinati. ES:</p>
+
+            <div class="code-part">
+                <h3 style="color:red" content="<html>"></h3>
+                <h3 style="margin-left: 30px; color:aqua" content="<head></head>"></h3>
+                <h3 style="margin-left: 30px; color:aqua" content="<body></body>"></h3>
+                <h3 style="color:red" content="</html>"></h3>
+            </div>
+            
+            <p>L'head già sggerito dalla parola è la testa, la parte iniziale che viene eseguita dal computer, serve a definire cose prima che il vero contenuto della pagina venga caricato.</p>
+            <p>Il body invece è la parte della pagina che vediamo.</p>
+            <p>Per le prime volte prima di introdurre il CSS utilizzeremo solo il body.</p>
+
+            <hr id="tag" class="rounded">
+
+            <h1>Dentro al body</h1>
+            <p>Come detto precendentemente nel body ci vanno le parti di codice che vorremo visualizzare, ma cosa bisogna scrivere? Semplici tag prestabiliti</p>
+            <div class="inline"><p>Per creare un titolo useremo <p style="margin: 0 10px 0 10px;" content="<h1>TITOLO</h1>"></p> dentro al body, ES:</p></div>
+            
+            <div class="code-example">
+                <code content="<html>"></code><br>
+                <code content="<head></head>"></code><br>
+                <code content="<body>"></code><br>
+                <code content="<p> My first page </p>"></code><br>
+                <code content="</body>"></code><br>
+                <code content="</html>"></code><br>
+                <div class="try" locationtab="./example/ex1-basic-blank.html">Prova tu!</div>
+            </div>
+            
+            <ul style="text-align: left;">
+                <li locationame="h1-h6.html" sott>h1-h6 => titolo</li>
+                <li locationame="./p.html" sott>p     => paragrafo</li>
+                <li locationame="./ul-ol.html" sott>ul,ol => liste</li>
+                <li locationame="./li.html" sott>li    => contenuto lista</li>
+                <li locationame="./a.html" sott>a     => collegamento link</li>
+                <li locationame="./img.html" sott>img   => immagine</li>
+                <li locationame="./div.html" sott>div   => contenitore</li>
+            </ul>
+        </section>
+    </body>
+</html>

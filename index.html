@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blank site</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+
+        <style>
+            .content:nth-child(1){
+                background: #203864 url("./source/html.png") no-repeat left;
+                background-size: auto 115%;
+                background-position: center;
+            }
+
+            .content:nth-child(2){
+                background: #ffffff6e url("./source/stelle.jpg") no-repeat;
+            }
+
+            .content:nth-child(3){
+                background: #ffffff url("./source/tramonto.jpg") no-repeat;
+                background-size: cover;
+            }
+
+            .content:nth-child(4){
+                background: #ffffff6e url("./source/tramondo-albero.jpg");
+                background-size: cover;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="be-nav"></div>
+
+        <nav>
+            
+            <span class="nav-divisor"></span>
+
+            <button class="nav-button" locationame="./index.html">Home</button>
+
+            <span class="nav-divisor"></span>
+
+            <button class="nav-button" locationame="main-html.html">HTML</button>
+
+            <span class="nav-divisor"></span>
+
+            <button class="nav-button" locationame="./css-tutorial.html">CSS</button>
+
+            <span class="nav-divisor"></span>
+
+        </nav>
+
+
+        <header class="carousel">
+
+            <p onclick="carousel('r',objId('imgGallery'),true)">«</p>
+
+            <h1 class="page-title">Home</h1>
+
+            <div id="imgGallery">
+
+                <img src="source/foresta-conifere.jpg" class="img-carousel visibility">
+
+                <img src="source/albero.jpg" class="img-carousel">
+
+                <img src="source/foresta2.jpg" class="img-carousel">
+
+                <img src="source/foresta3.jpg" class="img-carousel"> 
+
+            </div>
+
+            <p id="carouselValue">0</p>
+
+            <p onclick="carousel('d',objId('imgGallery'),true)">»</p>
+
+        </header>
+
+
+        <section>
+
+            <div class="content" locationame="./main-html.html">
+
+                <div class="content-animation"></div>
+
+                <div class="text">
+
+                    <h1>HTML</h1>
+                    <p>Impara a programmare da zero con corsi guidati!</p>
+
+                </div>
+
+            </div>
+
+            <div class="content" locationame="./page1.html">
+
+                <div class="content-animation"></div>
+
+                <div class="text">
+
+                    <h1>CSS</h1>
+                    <p>Corso css.</p>
+
+                </div>
+
+            </div>
+
+            <div class="content" locationame="./page1.html">
+
+                <div class="content-animation"></div>
+
+                <div class="text">
+
+                    <h1>ABCDEFGHI</h1>
+                    <p>abc</p>
+
+                </div>
+
+            </div>
+
+            <div class="content" locationame="./page1.html">
+
+                <div class="content-animation"></div>
+
+                <div class="text">
+
+                    <h1>ABCDEFGHI</h1>
+                    <p>abc</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <h3>Contatti</h3>
+
+            <img src="source/social.png" usemap="#image-map" class="social-img">
+
+            <map name="image-map">
+
+                <area alt="" href="https://instagram.com" coords="0,1,138,132" shape="rect">
+
+                <area alt="" href="https://facebook.com" coords="161,0,297,132" shape="0">
+
+                <area alt="" href="https://youtube.com" coords="322,0,457,132" shape="0">
+
+                <area alt="" href="https://twitter.com" coords="486,-1,617,131" shape="0">
+
+            </map>
+
+        </footer>   
+
+    </body>
+</html>

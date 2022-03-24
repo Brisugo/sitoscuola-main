@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../example-style.css">
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+    <div class="box code">
+        <code content="<html>"></code><br>
+        <code content="<head></head>"></code><br>
+        <code content="<body>"></code><br>
+        <code content="<p>"></code>
+        <input id="xP" type="text" value="Il mio primo paragrafo" placeholder="scrivi qualcosa">
+        <code content="</p>"></code><br>
+        <code content="</body>"></code><br>
+        <code content="</html>"></code><br>
+    </div>
+    <div class="box result">
+        <html>
+            <head></head>
+            <body>
+                <p id="P">Il mio primo paragrafo</p>
+            </body>
+        </html>
+    </div>   
+    <script type="text/javascript">
+        document.querySelector("#xP").addEventListener("input", function(){document.querySelector("#P").textContent = this.value})
+    </script> 
+</body>
+</html>
